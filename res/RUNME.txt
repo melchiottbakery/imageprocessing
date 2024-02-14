@@ -1,0 +1,40 @@
+load ./winnie.ppm test
+save resultFiles/winnie.jpg test
+save resultFiles/winnie.bmp test
+save resultFiles/winnie.jpeg test
+save resultFiles/winnie.png test
+load resultFiles/winnie.jpeg testJpeg
+load resultFiles/winnie.jpg testJpg
+load resultFiles/winnie.png testPng
+load resultFiles/winnie.bmp testBmp
+horizontal-flip test testHorizontalFlip
+vertical-flip test testVerticalFlip
+rgb-split test test1 test2 test3
+rgb-combine test test1 test2 test3
+brighten 10 test testBrighten
+brighten -10 test testDarken
+greyscale red-component test testRed
+greyscale green-component test testGreen
+greyscale blue-component test testBlue
+greyscale luma-component test testLuma
+greyscale intensity-component test testIntensity
+greyscale value-component test testValue
+greyscale test testGreyScaleColorTrans
+sepia test testSepia
+dither test testDither
+blur test testBlur
+blur testBlur testBlur2nd
+sharpen test testSharpen
+sharpen testSharpen testSharpen2nd
+run ./testRun.txt
+save resultFiles/winnieOrigin.png test
+save resultFiles/winnieBlur.png testBlur
+save resultFiles/winnieBlur2nd.jpg testBlur2nd
+save resultFiles/winnieDither.png testDither
+save resultFiles/winnieGreyScaleColorTrans.png testGreyScaleColorTrans
+save resultFiles/winnieSepia.png testSepia
+save resultFiles/winnieSharpen.png testSharpen
+save resultFiles/winnieSharpen2nd.bmp testSharpen2nd
+load resultFiles/winnieSharpen2nd.bmp bmpTransfer
+save resultFiles/winnieSharpen2ndbmpToppm.ppm bmpTransfer
+save resultFiles/winnieSharpen2ndbmpTojpg.jpg bmpTransfer

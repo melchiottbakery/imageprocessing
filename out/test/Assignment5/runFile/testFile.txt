@@ -1,0 +1,2 @@
+load test/ExtensionFiles/test.bmp test
+save test/runFile/testRunSave.ppm test
